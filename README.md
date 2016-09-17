@@ -36,7 +36,7 @@ const myProfile = {
 }
 ```
 
-When we run `myProfile.friends()`, it'll fetch a list from the API of our imaginary social media site, and set the
+When we run `myProfile.getFriends()`, it'll fetch a list from the API of our imaginary social media site, and set the
 `friends` array in the object to the result. Except... it won't. Not like this, anyway! The problem here is that we run
 into a scoping issue: the function callback in `.then()` has its own scope, so `myProfile.friends` will still be an
 empty array! A quick and dirty solution that you might see in the wild is 'caching' the right scope value in the outer
@@ -135,3 +135,5 @@ you're working with a super large application, but it's worth mentioning!
 - [MDN: Function.prototype.bind()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
 - [MDN: Arrow functions](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 - [Never Bind in Render](https://ryanfunduk.com/articles/never-bind-in-render/)
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/javascript-bind'>Javascript bind()</a> on Learn.co and start learning to code for free.</p>
